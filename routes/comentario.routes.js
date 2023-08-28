@@ -5,6 +5,8 @@ import ctrl from "../controllers/comentario.controllers.js";
 
 //CRUD
 //CREATE
-router.post("/",ctrl.nuevoComentario );
+router.post("/comentario",ctrl.nuevoComentario );
+
+router.get("/comentario/:id", ctrl.unComentario)
 
 export default router

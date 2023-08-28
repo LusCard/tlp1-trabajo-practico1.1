@@ -7,6 +7,7 @@ ctrl.nuevoProducto = (req, res ) =>{
             nombre_producto: req.body.producto,
             descripcion:req.body.descripcion,
             precio:req.body.precio,
+            id_usuario:req.body.id_usuario,
         },{
             where: {
                 id:req.params.id

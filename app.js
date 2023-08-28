@@ -27,7 +27,7 @@ app.use(express.urlencoded({extended:false}));
 //RUTAS
 app.use("/api/", usuarioRutas);
 app.use("/api/", productoRutas);
-app.use("/api/comentario", comentarioRutas);
+app.use("/api/", comentarioRutas);
 
 sequelize.authenticate().then(()=>{
         console.log('Conexión exitosa a la base de datos');

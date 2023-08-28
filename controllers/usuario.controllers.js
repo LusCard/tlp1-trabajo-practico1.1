@@ -24,22 +24,22 @@ ctrl.nuevoUsuario = (req, res ) =>{
 
 
 
-// ctrl.unUsuario = async (req, res)=>{
-//     try {
-//         let usuarios = await modelo_usuario.findByPk(req.params.id);
-//         if(!usuarios || usuarios.length === 0){
-//             throw{
-//                 status: 404,
-//                 message: "No se ha encontrado el usuario"
-//             };
-//         }else{
-//             return res.json(usuarios)
-//         }
-//     } catch (error) {
-//         return res.status(error.status || 500).json({
-//             message: error.message || "Error interno del servidor al obtener un usuario",
-//         });
-//     }};
+ctrl.unUsuario = async (req, res)=>{
+    try {
+        let usuario = await modelo_usuario.findByPk(req.params.id);
+        if(!usuario || usuario.length === 0){
+            throw{
+                status: 404,
+                message: "No se ha encontrado el usuario"
+            };
+        }else{
+            return res.json(usuario)
+        }
+    } catch (error) {
+        return res.status(error.status || 500).json({
+            message: error.message || "Error interno del servidor al obtener un usuario",
+        });
+    }};
 
 
 export default ctrl

@@ -6,7 +6,7 @@ const modelo_producto = sequelize.define("producto",{
         type:DataTypes.INTEGER,
         allowNull:false,
         primaryKey:true,
-        autoIncrement:true
+        autoIncrement:true,
     },
     nombre_producto:{
         type:DataTypes.STRING,

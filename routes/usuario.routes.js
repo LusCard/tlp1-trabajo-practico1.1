@@ -7,4 +7,6 @@ import ctrl from "../controllers/usuario.controllers.js"
 //CREATE
 router.post("/usuario",ctrl.nuevoUsuario);
 
+router.get("/usuario/:id", ctrl.unUsuario);
+
 export default router
